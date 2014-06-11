@@ -22,10 +22,9 @@ function ConnectionProtocol(stream, opts) {
   if (!opts.destination || !(opts.destination instanceof Buffer))
     throw new Error('requires opts.destination (Buffer)')
 
-  if (!opts.payloadType)
-    throw new Error('requires opts.payloadType')
-
-  return transDuplex.obj(outgoing, stream, incoming)
+  var stream = transDuplex.obj(outgoing, stream, incoming)
+  stream.opts = opts
+  return stream
 
   // filter if msg src + dst dont match
   function filter(msg, src, dst) {

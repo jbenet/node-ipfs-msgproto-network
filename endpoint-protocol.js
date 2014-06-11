@@ -19,6 +19,7 @@ function EndpointProtocol(stream, opts) {
     throw new Error('requires opts.source (Buffer)')
 
   var stream = transDuplex.obj(outgoing, stream, incoming)
+  stream.opts = opts
   stream.send = send // patch in send helper
   return stream
 
@@ -28,8 +29,6 @@ function EndpointProtocol(stream, opts) {
       throw new Error('dest must be a Buffer')
 
     payloadType = payloadType || opts.payloadType
-    if (!payloadType)
-      throw new Error('no payloadType defined (can use opts.payloadType)')
 
     msg = NetworkFrame(opts.source, dest, msg, payloadType)
     this.write(msg)
