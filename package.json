@@ -6,10 +6,14 @@
   "dependencies": {
     "buffer-equal": "0.0.1",
     "duplex-transform": "^0.1.3",
-    "msgproto": "^0.1.3",
+    "msgproto": "^0.1.4",
     "xtend": "^3.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "lodash.map": "^2.4.1",
+    "multi-dgram-stream": "^0.1.0",
+    "tape": "^2.13.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
