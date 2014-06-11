@@ -1,0 +1,8 @@
+// Routable IPFS msgproto message.
+// From a source ID to a destination ID.
+// IDs here are node identities, or groups.
+message NetworkFrame {
+  optional bytes source = 1;
+  optional bytes destination = 2;
+  optional bytes payload = 3;
+}

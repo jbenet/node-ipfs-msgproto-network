@@ -1,0 +1,31 @@
+{
+  "name": "ipfs-msgproto-network",
+  "version": "0.1.0",
+  "description": "msgproto network",
+  "main": "index.js",
+  "dependencies": {
+    "buffer-equal": "0.0.1",
+    "duplex-transform": "^0.1.3",
+    "msgproto": "^0.1.3",
+    "xtend": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbenet/node-ipfs-msgproto-network.git"
+  },
+  "keywords": [
+    "ipfs",
+    "msgproto",
+    "network"
+  ],
+  "author": "Juan Benet <juan@benet.ai> (http://juan.benet.ai/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbenet/node-ipfs-msgproto-network/issues"
+  },
+  "homepage": "https://github.com/jbenet/node-ipfs-msgproto-network"
+}
